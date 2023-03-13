@@ -1,0 +1,116 @@
+---
+title: "Downloads"
+downloadable:
+-
+    heading: OpenSearch
+    description: Linux, x64, .tgz
+    download-label: Download OpenSearch
+    docker-label: OpenSearch on Docker
+    ref: opensearch
+-
+    heading: OpenSearch Dashboards
+    description: Linux, x64, .tgz
+    download-label: Download OpenSearch Dashboards
+    docker-label: OpenSearch Dashboards on Docker
+    ref: opensearch_dashboards
+
+pgp:
+    current_sig: "C2EE 2AF6 542C 03B4"
+    link: https://artifacts.opensearch.org/publickeys/opensearch.pgp
+---
+<right-aside-layout>
+    <div slot="header"><h1>Downloads</h1></div>
+    <div slot="main-column">
+        <h2>How to get started with OpenSearch</h2>
+        <p>
+            OpenSearch is open source software that uses the Apache License version 2 (ALv2). ALv2 grants you
+            well-understood usage rights; you can use, modify, extend, embed, monetize, resell, and offer OpenSearch as
+            part of your products and services. The source for the entire project is available on GitHub and you’re
+            welcome to build from source for customized deployments. Downloadable artifacts for OpenSearch and
+            OpenSearch Dashboards include plugins and tools, ready for you to use with minimal configuration.
+        </p>
+
+        <div class="downloads">
+            {{#each page.downloadable as | downloadable |}}
+            <div>
+                <h2>{{downloadable.heading}}</h2>
+                {{#with (lookup @root.data.opensearch_artifacts [ref]) as | artifacts |}}
+                <small>
+                    {{downloadable.description}} (<a href="{{artifacts.sig}}">signature</a>)<br>
+                    Current version: {{artifacts.latest_version}}
+                </small>
+                <big-button class="wide" href="{{artifacts.linux_x64}}">{{downloadable.download-label}}</big-button>
+                <hr>
+                <big-button class="wide outline" href="{{artifacts.docker}}">{{downloadable.docker-label}}</big-button>
+                {{/with}}
+            </div>
+            {{/each}}
+        </div>
+        <hr>
+
+        <h2>Try OpenSearch with Docker Compose</h2>
+        <p>
+            The best way to try out OpenSearch is to use <a href="https://docs.docker.com/compose/install/">Docker
+            Compose</a>.
+            These steps will setup a two node cluster of OpenSearch plus OpenSearch Dashboards:
+        </p>
+        <ol>
+            <li>
+                <p>
+                    Download <a href="/samples/docker-compose.yml" download="">docker-compose.yml</a> into your desired
+                    directory
+                </p>
+            </li>
+            <li>
+                <p>Run <code>docker-compose up</code></p>
+            </li>
+
+            <li>
+                <p>Have a nice coffee while everything is downloading and starting up</p>
+            </li>
+
+            <li>
+                <p>
+                    Navigate to <code>http://localhost:5601/</code> for
+                    OpenSearch Dashboards
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    Login with the default username (<code>admin</code>)
+                    and password (<code>admin</code>)
+                </p>
+            </li>
+
+        </ol>
+    </div>
+    <div slot="side-column">
+        <side-section>
+            <span slot="heading">{{feedback.head}}</span>
+            <p>{{feedback.description}}</p>
+            <read-more href="{{data.feedback.link.url}}">{{feedback.link.title}}</read-more>
+        </side-section>
+
+        <side-section>
+            <span slot="heading">Need Open Distro?</span>
+            <p>Open Distro for Elasticsearch can still be downloaded.</p>
+            <read-more href="https://opendistro.github.io/for-elasticsearch/downloads.html">Get it Here</read-more>
+        </side-section>
+
+        <side-section>
+            <span slot="heading">How to verify signatures</span>
+            <p>
+                Download our PGP key using the link below and import it. If you’re using gpg, you just need to run
+                <code>gpg --import /path/to/key</code>. You can then verify the signature by downloading it into the
+                same directory where you downloaded the tarball, and running
+                <code>gpg --verify /path/to/signature /path/to/tarball</code>. It should show a good signature signed by
+                opensearch@amazon.com.
+            </p>
+            <p>
+                Our current PGP key fingerprint is <code>{{page.pgp.current_sig}}</code>
+            </p>
+            <read-more href="{{page.pgp.link}}">Get Our PGP key</read-more>
+        </side-section>
+    </div>
+</right-aside-layout>

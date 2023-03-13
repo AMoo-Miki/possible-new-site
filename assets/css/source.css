@@ -1,0 +1,34 @@
+dl.source dt a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--color-active-on-light);
+    background: var(--background-shaded);
+    padding: 0.25em 1em 0 1em;
+    border-radius: 5px 5px 0 0;
+}
+
+dl.source dt a:hover {
+    background-image: none;
+}
+
+.source .icon-github {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-size: contain;
+}
+
+dl.source dd {
+    padding: 0.5em 1em;
+    background-color: var(--background-shaded);
+    margin-bottom: 1em;
+    border-radius: 0 5px 5px 5px;
+}
+
+dl.source p {
+    margin: 0 0 .5em;
+}
+
+dl.source read-more:not(:first-of-type) {
+    margin-left: 1.5em;
+}

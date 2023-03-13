@@ -1,0 +1,54 @@
+:host {
+    background-image: linear-gradient(to right, var(--background-light) 50%, var(--background-shaded) 50%);
+    height: 100%;
+    display: block;
+}
+
+.width-limiter {
+    max-width: var(--max-width);
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: stretch;
+    height: 100%;
+    margin: 0 auto;
+}
+
+main {
+    background: var(--background-light);
+    padding: 1em var(--two-column-outer-side-padding) 1em;
+}
+
+aside {
+    background: var(--background-shaded);
+    padding: .5em var(--two-column-outer-side-padding) 1em;
+}
+
+aside ::slotted(*) {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+}
+
+.header {
+    background: var(--background-header);
+}
+
+.header .width-limiter ::slotted(*) {
+    padding: 0 var(--two-column-outer-side-padding);
+}
+
+@media (min-width: 768px) {
+    .width-limiter {
+        flex-flow: row nowrap;
+    }
+
+    main {
+        width: var(--two-column-width-main);
+        padding: 1em var(--two-column-inner-side-padding) 4em var(--two-column-outer-side-padding);
+    }
+
+    aside {
+        padding: .5em var(--two-column-outer-side-padding) 1em var(--two-column-inner-side-padding);
+        flex-grow: 1;
+        width: var(--two-column-width-aside);
+    }
+}

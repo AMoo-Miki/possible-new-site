@@ -1,0 +1,19 @@
+<style>
+    @import "/elements/news-page/news-page.css";
+</style>
+<right-aside-layout>
+    <div slot="header"><h1>News</h1></div>
+    <div slot="main-column">
+        <slot name="list"></slot>
+    </div>
+    <div slot="side-column">
+        <side-section class="no-heading">
+            <p>
+                Are you hosting your own OpenSearch event? Write
+                <a href="https://github.com/opensearch-project/project-website/tree/main/_samples/event.sample.markdown">some yaml / markdown</a>,
+                do <a href="https://github.com/opensearch-project/project-website/tree/main/_events">pull-request on the events directory</a>
+                and we'll merge qualifying events.
+            </p>
+        </side-section>
+    </div>
+</right-aside-layout>

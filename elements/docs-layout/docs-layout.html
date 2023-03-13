@@ -1,0 +1,27 @@
+<style>
+    @import "/elements/docs-layout/docs-layout.css";
+</style>
+<div class="header">
+    <div class="width-limiter">
+        <h1>
+            <span class="trigger-placeholder">Documentation</span>
+            <a href="" class="trigger" aria-haspopup="menu" aria-controls="side-menu">Documentation<svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-grid"></use></svg></a>
+        </h1>
+    </div>
+</div>
+<div class="width-limiter">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="svg-chevron">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </symbol>
+        <symbol id="svg-grid">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+        </symbol>
+    </svg>
+    <nav id="side-menu" aria-label="{{docs.nav.label}}" aria-expanded="false"></nav>
+    <main><slot></slot></main>
+</div>

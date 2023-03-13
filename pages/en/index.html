@@ -1,0 +1,91 @@
+---
+principles:
+    -
+        title: Great software.
+        description: If it doesn’t solve your problems, everything else is moot. It’s going to be software you love to use.
+    -
+        title: Open source like we mean it.
+        description: We are invested in this being a successful open source project for the long term. It’s all Apache 2.0. There’s no Contributor License Agreement. Easy.
+    -
+        title: A level playing field.
+        description: We will not tweak the software so that it runs better for any vendor (including AWS) at the expense of others. If this happens, call it out and we will fix it as a community.
+    -
+        title: Used everywhere.
+        description: Our goal is for as many people as possible to use it in their business, their software, and their projects. Use it however you want. Surprise us!
+    -
+        title: Made with your input.
+        description: We will ask for public input on direction, requirements, and implementation for any feature we build.
+    -
+        title: Open to contributions.
+        description: Great open source software is built together, with a diverse community of contributors. If you want to get involved at any level - big, small, or huge - we will find a way to make that happen. We don’t know what that looks like yet, and we look forward to figuring it out together.
+    -
+        title: Respectful, approachable, and friendly.
+        description: This will be a community where you will be heard, accepted, and valued, whether you are a new or experienced user or contributor.
+    -
+        title: A place to invent.
+        description: You will be able to innovate rapidly. This project will have a stable and predictable foundation that is modular, making it easy to extend.
+
+button:
+    downloads: Get Started
+    github: OpenSearch Project on GitHub
+    roadmap: View the project roadmap
+---
+<right-aside-layout>
+    <div slot="main-column">
+        <h1 class="center">OpenSearch makes it easy to ingest, search, visualize, and analyze your data.</h1>
+        <hr>
+        <p>OpenSearch is a community-driven, open source search and analytics suite derived from Apache 2.0 licensed Elasticsearch 7.10.2 & Kibana 7.10.2. It consists of a search engine daemon, OpenSearch, and a visualization and user interface, OpenSearch Dashboards. OpenSearch enables people to easily ingest, secure, search, aggregate, view, and analyze data. These capabilities are popular for use cases such as application search, log analytics, and more. With OpenSearch people benefit from having an open source product they can use, modify, extend, monetize, and resell how they want. At the same time, OpenSearch will continue to provide a secure, high-quality search and analytics suite with a rich roadmap of new and innovative functionality.</p>
+        <hr>
+
+        <h2>The OpenSearch project's principles for development</h2>
+        <p>When we (the contributors) are successful, OpenSearch will be:</p>
+        <dl class="principles">
+            {{#page.principles}}
+                <dt>{{title}}</dt>
+                <dd>{{description}}</dd>
+            {{/page.principles}}
+        </dl>
+
+        <big-button class="bigger center outline" href="{{lang.url-prefix}}/downloads">{{page.button.downloads}}</big-button>
+    </div>
+    <div slot="side-column">
+        <big-button class="wide" href="{{lang.url-prefix}}/downloads">{{page.button.downloads}}</big-button>
+        <big-button class="wide outline" href="{{data.repos.org.url}}">{{page.button.github}}</big-button>
+        <read-more class="wide center" style="margin-top: -10px" href="https://github.com/orgs/opensearch-project/projects/1">{{page.button.roadmap}}</read-more>
+
+        <side-section>
+            <span slot="heading">Looking for Open Distro?</span>
+            <p>
+                <img src="/assets/img/logo-opendistro.svg" height="55" alt="Open Distro Logo">
+                Open Distro for Elasticsearch is still available.<br>
+                <a href="http://opendistro.github.io/for-elasticsearch/">Find it here</a>
+            </p>
+        </side-section>
+
+        <side-section>
+            <span slot="heading">What's new?</span>
+            {{#data.posts.recent}}
+                <h4><a href="{{lang.url-prefix}}/blog/{{key}}">{{data.title}}</a></h4>
+                <p>{{{truncate (strip content) 160}}}</p>
+            {{/data.posts.recent}}
+
+            <read-more href="{{lang.url-prefix}}/blog">More news</read-more>
+        </side-section>
+
+        <side-section>
+            <span slot="heading">Have a question?</span>
+            <p>
+                Do you have a question regarding OpenSearch? Maybe you aren’t the first to ask it. Checkout our frequently asked questions (FAQ) to see if your question is already answered. If not, don’t hesitate to ask in the community forums.
+            </p>
+            <p><a href="{{lang.url-prefix}}/faq">Check out the FAQ</a></p>
+            <p><a href="https://discuss.opendistrocommunity.dev/">Ask in the forums</a></p>
+        </side-section>
+
+        <side-section>
+            <span slot="heading">Founding documents</span>
+            <p><a href="https://aws.amazon.com/blogs/opensource/introducing-opensearch">Introducing OpenSearch</a></p>
+            <p><a href="https://aws.amazon.com/blogs/opensource/stepping-up-for-a-truly-open-source-elasticsearch/">Stepping up for a truly open source Elasticsearch</a></p>
+            <p><a href="https://aws.amazon.com/blogs/opensource/keeping-open-source-open-open-distro-for-elasticsearch/">Keeping Open Source Open</a></p>
+        </side-section>
+    </div>
+</right-aside-layout>

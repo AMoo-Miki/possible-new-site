@@ -1,0 +1,24 @@
+<right-aside-layout>
+  <div slot="main-column">
+    <h1>{{page.data.title}}</h1>
+    <div class="smaller bolder space-top condensed">
+      {{#if page.data.online}}{{event.online}}{{/if}}
+      {{#page.data.location}}{{city}} ({{country}}){{/page.data.location}}
+      {{#page.data.cost}}&middot; {{.}}{{/page.data.cost}}
+    </div>
+    {{#page.data.image}}<img src="{{.}}">{{/page.data.image}}
+    {{{page.content}}}
+  </div>
+  <div slot="side-column">
+    <side-section class="no-heading">
+      <p>
+        <strong>Date:</strong>  {{page.event-date}} <br />
+        <strong>Time:</strong> {{page.event-time}} ({{page.data.tz}})
+      </p>
+
+      {{#with page.data.signup}}
+      <big-button class="wide" href="{{url}}">{{title}}</big-button>
+      {{/with}}
+    </side-section>
+  </div>
+</right-aside-layout>

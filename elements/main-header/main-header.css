@@ -1,0 +1,101 @@
+:host {
+    background: #0c2c4a;
+    padding: 20px 10px;
+    color: var(--color-text-on-dark);
+    display: block;
+    user-select: none;
+}
+.width-limiter {
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.logo {
+    background: url("/assets/img/opensearch_logo_darkmode.svg") center no-repeat;
+    width: 18.6rem;
+    height: 3.6rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0);
+}
+
+#trigger,
+#trigger svg {
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#header-menu {
+    display: none;
+    flex-flow: column nowrap;
+    padding: 0;
+    font-size: 1.8rem;
+}
+
+#trigger[aria-expanded="true"] {
+    color: var(--color-active-on-dark);
+    stroke: var(--color-active-on-dark);
+    fill: var(--color-active-on-dark);
+}
+
+#trigger[aria-expanded="true"] ~ #header-menu {
+    display: flex;
+}
+
+#trigger,
+#header-menu a {
+    color: var(--color-text-on-dark);
+    stroke: var(--color-text-on-dark);
+    fill: var(--color-text-on-dark);
+    cursor: pointer;
+    padding: 10px 15px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+#trigger:hover,
+#header-menu a:hover {
+    color: var(--color-hover-on-dark);
+    stroke: var(--color-hover-on-dark);
+    fill: var(--color-hover-on-dark);
+}
+
+#trigger:active,
+#header-menu a:active {
+    color: var(--color-active-on-dark);
+    stroke: var(--color-active-on-dark);
+    fill: var(--color-active-on-dark);
+}
+
+.tools {
+    text-align: right;
+    margin-left: auto;
+}
+
+.tools svg {
+    vertical-align: middle;
+    display: block;
+}
+
+lang-selector {
+    padding: 10px 15px;
+    justify-content: right;
+}
+
+@media (min-width: 768px) {
+    #header-menu,
+    #trigger[aria-expanded="true"] ~ #header-menu {
+        display: inline-flex;
+        flex-flow: row nowrap;
+        margin: 0 0 0 3em;
+        font-size: 1.5rem;
+    }
+
+    #trigger {
+        display: none;
+    }
+}

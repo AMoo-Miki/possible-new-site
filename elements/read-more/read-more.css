@@ -1,0 +1,34 @@
+:host {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+:host(.wide) {
+    display: block;
+}
+:host(.center) {
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--color-link-on-light);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a::after {
+    content: " ›";
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: var(--color-hover-on-light);
+}
+
+a:active {
+    color: var(--color-active-on-light);
+}

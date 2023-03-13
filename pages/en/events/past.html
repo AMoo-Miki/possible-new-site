@@ -1,0 +1,24 @@
+---
+title: "Past Events"
+---
+<right-aside-layout>
+    <div slot="header"><h1>Events</h1></div>
+    <div slot="main-column">
+        <h2>Past Events</h2>
+        <events-list data-past="true"></events-list>
+    </div>
+    <div slot="side-column">
+        <side-section class="no-heading">
+        <p>
+            Are you hosting your own OpenSearch event? Write
+            <a href="https://github.com/opensearch-project/project-website/tree/main/_samples/event.sample.markdown">some yaml / markdown</a>,
+            do <a href="https://github.com/opensearch-project/project-website/tree/main/_events">pull-request on the events directory</a>
+            and we'll merge qualifying events.
+        </p>
+        </side-section>
+        <side-section>
+            <span slot="heading">Looking for an upcoming event?</span>
+            <p>Take a look at the <a href="{{lang.url-prefix}}/events/">upcoming events</a> page.</p>
+        </side-section>
+    </div>
+</right-aside-layout>

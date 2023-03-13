@@ -1,0 +1,64 @@
+:host {
+    display: block;
+    max-width: 400px;
+}
+
+a {
+    display: block;
+    cursor: pointer;
+
+    font-weight: normal;
+    font-size: 1.6rem;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    margin: 20px 0;
+
+    font-family: var(--font-sans);
+    text-align: center;
+    text-decoration: none;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+
+    color: var(--color-text-on-dark);
+    background: var(--color-link-on-light);
+    border: 0;
+}
+
+a:hover {
+    background: var(--color-hover-on-light);
+}
+
+a:active {
+    background: var(--color-active-on-light);
+}
+
+:host(.outline) a {
+    color: var(--color-link-on-light);
+    background: none;
+    border: 1px solid var(--color-link-on-light);
+}
+
+:host(.outline) a:hover {
+    color: var(--color-hover-on-light);
+    border: 1px solid var(--color-hover-on-light);
+    background: none;
+}
+
+:host(.outline) a:active {
+    color: var(--color-active-on-light);
+    border: 1px solid var(--color-active-on-light);
+    background: none;
+}
+
+:host(.bigger) {
+    font-size: 1.8rem;
+}
+
+:host(.center) {
+    margin: 0 auto;
+}
+
+:host(.wide) {
+    max-width: unset;
+}

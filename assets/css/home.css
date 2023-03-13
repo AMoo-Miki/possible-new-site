@@ -1,0 +1,12 @@
+dl.principles {
+    counter-reset: principles;
+}
+
+dl.principles dt {
+    counter-increment: principles;
+}
+
+dl.principles dt::before {
+    content: counter(principles) ". ";
+    opacity: 0.6;
+}

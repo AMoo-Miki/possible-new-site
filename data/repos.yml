@@ -1,0 +1,34 @@
+org:
+    title: OpenSearch Project
+    description: The GitHub organization for the entire OpenSearch Project
+    url: https://github.com/opensearch-project
+os:
+    title: OpenSearch
+    description: The full-text search daemon forked from Elasticsearch 7.10.2
+    url: https://github.com/opensearch-project/opensearch
+    special_files:
+      -
+        title: Contributing
+        url: https://github.com/opensearch-project/OpenSearch/blob/main/CONTRIBUTING.md
+      - 
+        title: Developer Guide
+        url: https://github.com/opensearch-project/OpenSearch/blob/main/DEVELOPER_GUIDE.md
+os-d:
+    title: OpenSearch Dashboards
+    description: The user interface and visualization tool forked from Kibana 7.10.2
+    url: https://github.com/opensearch-project/opensearch-dashboards
+    special_files:
+      -
+        title: Contributing
+        url: https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/CONTRIBUTING.md
+      - 
+        title: Developer Guide
+        url: https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/DEVELOPER_GUIDE.md
+website:
+    title: OpenSearch Website
+    description: The source to this website.
+    url: https://github.com/opensearch-project/project-website
+    special_files:
+      -
+        title: Contributing
+        url: https://github.com/opensearch-project/project-website/blob/main/CONTRIBUTING.md

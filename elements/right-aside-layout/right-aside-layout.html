@@ -1,0 +1,10 @@
+<style>
+    @import "/elements/right-aside-layout/right-aside-layout.css";
+</style>
+<div class="header">
+    <div class="width-limiter"><slot name="header"></slot></div>
+</div>
+<div class="width-limiter">
+    <main><slot name="main-column"></slot></main>
+    <aside><slot name="side-column"></slot></aside>
+</div>

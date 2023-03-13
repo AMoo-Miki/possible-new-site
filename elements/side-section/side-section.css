@@ -1,0 +1,27 @@
+:host {
+    margin: 2em 0;
+    display: block;
+}
+
+:host(.no-heading) h3,
+:host(.no-heading) hr{
+    display: none;
+}
+
+h3 {
+    margin: .6em 0 .3em;
+    line-height: 1.2;
+    color: #002a3a;
+}
+
+h3 ::slotted(*) {
+    font-family: var(--font-condensed);
+    font-size: 1.8rem;
+}
+
+hr {
+    margin: 0;
+    border: 0;
+    height: 1px;
+    background: var(--color-dividing-line);
+}

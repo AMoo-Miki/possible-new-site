@@ -1,0 +1,12 @@
+div.downloads {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -4%;
+}
+
+div.downloads > div {
+    min-width: 50%;
+    box-sizing: border-box;
+    padding-left: 4%;
+    flex-grow: 1;
+}

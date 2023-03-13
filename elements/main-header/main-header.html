@@ -1,0 +1,36 @@
+<style>
+    @import "/elements/main-header/main-header.css";
+</style>
+<div class="width-limiter">
+    <a class="logo" href="{{lang.url-prefix}}/">OpenSearch</a>
+    <div>
+        <!--input type="checkbox"
+               aria-haspopup="true"
+               aria-controls="header-menu"
+               aria-expanded="false"
+               aria-label="{{header.nav-trigger.label}}"
+        -->
+        <a id="trigger" href="#"
+           aria-haspopup="true"
+           aria-controls="header-menu"
+           aria-expanded="false"
+           aria-label="{{header.nav-trigger.label}}"
+        >
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'>
+                <path d='M96 20v-8c0-1.1-.4-2-1.2-2.8S93.1 8 92 8H4c-1.1 0-2 .4-2.8 1.2S0 10.9 0 12v8c0 1.1.4 2 1.2 2.8S2.9 24 4 24h88c1.1 0 2-.4 2.8-1.2S96 21.1 96 20zm0 32v-8c0-1.1-.4-2-1.2-2.8S93.1 40 92 40H4c-1.1 0-2 .4-2.8 1.2S0 42.9 0 44v8c0 1.1.4 2 1.2 2.8S2.9 56 4 56h88c1.1 0 2-.4 2.8-1.2S96 53.1 96 52zm0 32v-8c0-1.1-.4-2-1.2-2.8S93.1 72 92 72H4c-1.1 0-2 .4-2.8 1.2S0 74.9 0 76v8c0 1.1.4 2 1.2 2.8S2.9 88 4 88h88c1.1 0 2-.4 2.8-1.2S96 85.1 96 84z'/>
+            </svg>
+        </a>
+        <div id="header-menu" class="menu"
+             role="navigation"
+             aria-label="{{header.nav.label}}"
+        >
+            <a role="menuitem" data-path="blog" href="{{lang.url-prefix}}/blog/">{{nav.blog}}</a>
+            <a role="menuitem" data-path="source" href="{{lang.url-prefix}}/source/">{{nav.source}}</a>
+            <a role="menuitem" data-path="docs" href="{{lang.url-prefix}}/docs/">{{nav.docs}}</a>
+            <a role="menuitem" data-path="events" href="{{lang.url-prefix}}/events/">{{nav.events}}</a>
+            <a role="menuitem" data-path="downloads" href="{{lang.url-prefix}}/downloads/">{{nav.downloads}}</a>
+
+            <lang-selector></lang-selector>
+        </div>
+    </div>
+</div>

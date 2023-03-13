@@ -1,0 +1,109 @@
+:root {
+    --max-width: 1400px;
+
+    --background-dark: #0c2c4a;
+    --background-semi-dark: #00a3e0;
+    --background-semi-light: #c9ddf0;
+    --background-light: #fff;
+    --background-shaded: #f5f7f7;
+    --background-header: #D9E1E2;
+
+    --color-text-on-dark: #fff;
+    --color-link-on-dark: #4480b8;
+    --color-hover-on-dark: #c9ddf0;
+    --color-active-on-dark: #4480b8;
+    --color-focused-on-dark: #00a3e0;
+
+    --color-text-on-light: #333;
+    --color-link-on-light: #0057a8;
+    --color-hover-on-light: #1579d6;
+    --color-active-on-light: #00529e;
+    --color-focused-on-light: #00a3e0;
+
+    --color-text-on-semi-light: #000;
+    --color-text-on-semi-dark: #fff;
+
+    --color-dividing-line: #ccd3d6;
+
+
+    --two-column-width-main: 100%;
+    --two-column-width-aside: 100%;
+    --two-column-outer-side-padding: 10px;
+    --two-column-inner-side-padding: 10px;
+
+    --two-column-docs-width-main: 100%;
+    --two-column-docs-width-aside: 100%;
+
+    --font-serif: "Noto Serif", 'Iowan Old Style', 'Apple Garamond', 'Baskerville', 'Times New Roman', serif;
+    --font-sans: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+    --font-condensed: "Open Sans Condensed", Impact, "Franklin Gothic Bold", sans-serif;
+    --font-mono: "Fira Mono", Consolas, Menlo, Monaco, "Courier New", Courier, monospace;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --two-column-width-main: 62%;
+        --two-column-width-aside: 30%;
+        --two-column-outer-side-padding: 4%;
+        --two-column-inner-side-padding: 4%;
+
+        --two-column-docs-width-aside: 280px;
+        --two-column-docs-width-main: calc(100% - 280px);
+    }
+}
+
+@media (min-width: 1400px) {
+    :root {
+        --two-column-width-main: 62%;
+        --two-column-width-aside: 30%;
+        --two-column-outer-side-padding: calc(756px - 50vw);
+        --two-column-inner-side-padding: 4%;
+
+        --two-column-docs-width-aside: 20%;
+        --two-column-docs-width-main: 72%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.bolder {
+    font-weight: 700;
+}
+
+.smaller {
+    font-size: 1.6rem;
+}
+
+.small {
+    font-size: 1.4rem;
+}
+
+.space-top {
+    margin-top: 2em;
+}
+
+.condensed {
+    font-family: var(--font-condensed);
+}

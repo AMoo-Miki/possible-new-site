@@ -1,0 +1,35 @@
+---
+title: "Source Code"
+---
+<right-aside-layout>
+    <div slot="header"><h1>Source Code</h1></div>
+    <div slot="main-column">
+        <p>
+            OpenSearch and OpenSearch Dashboards as well as the plugins and tools included in the OpenSearch Project are
+            open source software with an Apache 2.0 license. We encourage you to use it all to the full extent of this
+            license.
+        </p>
+
+        <dl class="source">
+        {{#each data.repos}}
+            <dt>
+                <a href="{{url}}"><span class="icon icon-github"></span> {{title}}</a>
+            </dt>
+
+            <dd>
+                <p>{{description}}</p>
+                {{#special_files}}
+                <read-more href="{{url}}">{{title}}</read-more>
+                {{/special_files}}
+            </dd>
+        {{/each}}
+        </dl>
+    </div>
+    <div slot="side-column">
+        <side-section>
+            <span slot="heading">{{feedback.head}}</span>
+            <p>{{feedback.description}}</p>
+            <read-more href="{{data.feedback.link.url}}">{{feedback.link.title}}</read-more>
+        </side-section>
+    </div>
+</right-aside-layout>
